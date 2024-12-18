@@ -155,3 +155,4 @@ def delete_item(item_id: int) -> dict[str, Item]:
 
     item = items.pop(item_id)
     return {"deleted": item}
+print('look at me')
