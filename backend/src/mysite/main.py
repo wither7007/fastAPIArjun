@@ -8,7 +8,7 @@ from fastapi import FastAPI, HTTPException, Path, Query
 # The description also supports markdown formatting.
 app = FastAPI(
     title="My Fast API",
-    description="From Arjun",
+    description="frm Branch new",
     version="0.1.0",
 )
 

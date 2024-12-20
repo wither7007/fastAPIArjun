@@ -2,3 +2,7 @@ docker rm -vf $(docker ps -aq) && docker rmi -f $(docker images -aq)
 docker run -d -p 8000:80 nginx:stable-bookworm
 docker exec -it 9e4d17dcade1 /bin/bash
 docker run -p 8000:8000 mysite-backend
+docker build -t mysite-backend . 
+
+docker build -t mysite-backend . && docker run -p 8000:8000 mysite-backend
+docker build -t mysite-frontend . && docker run -p 80:80 -d  mysite-frontend
