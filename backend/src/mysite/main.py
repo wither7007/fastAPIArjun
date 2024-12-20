@@ -7,8 +7,8 @@ from fastapi import FastAPI, HTTPException, Path, Query
 # You can give your API a title and add additional metadata such as a description, version number, etc.
 # The description also supports markdown formatting.
 app = FastAPI(
-    title="Arjan's Handyman Emporium",
-    description="Arjan does not only code but also helps you fix things. **See what's in stock!**",
+    title="My Fast API",
+    description="From Arjun",
     version="0.1.0",
 )
 
