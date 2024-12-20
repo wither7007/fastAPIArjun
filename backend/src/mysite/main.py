@@ -1,7 +1,7 @@
 from enum import Enum
 
 from pydantic import BaseModel, Field
-
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, HTTPException, Path, Query
 
 # You can give your API a title and add additional metadata such as a description, version number, etc.
@@ -10,6 +10,14 @@ app = FastAPI(
     title="My Fast API",
     description="frm Branch new",
     version="0.1.0",
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # Docstrings of classes will be reflected in the API documentation in the 'Schemas' section
