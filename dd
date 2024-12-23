@@ -4,5 +4,5 @@ docker exec -it 9e4d17dcade1 /bin/bash
 docker run -p 8000:8000 mysite-backend
 docker build -t mysite-backend . 
 
-docker build -t mysite-backend . && docker run -p -d 8000:8000 mysite-backend
+docker build -t mysite-backend . && docker run -p 8000:8000 -d  mysite-backend
 docker build -t mysite-frontend . && docker run -p 80:80 -d  mysite-frontend
